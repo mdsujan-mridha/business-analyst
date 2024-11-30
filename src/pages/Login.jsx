@@ -21,11 +21,11 @@ const Login = () => {
                         <form>
                             <div>
                                 <p className='text-lg font-semibold py-2'>  Enter your email </p>
-                                <input type="email" placeholder='E@mail' className=' w-full h-14 rounded-2xl p-3' />
+                                <input type="email" placeholder='E@mail' className=' w-full h-14 rounded-2xl p-3 outline-none' />
                             </div>
                             <div>
                                 <p className='text-lg font-semibold py-2'> Enter your password </p>
-                                <input type="email" placeholder='password' className=' w-full h-14 rounded-2xl p-3' />
+                                <input type="email" placeholder='password' className=' w-full h-14 rounded-2xl p-3 outline-none' />
                             </div>
                             <div className='flex justify-between items-center py-5'>
                                 <div>
