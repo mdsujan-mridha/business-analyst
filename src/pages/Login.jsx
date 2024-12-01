@@ -21,11 +21,11 @@ const Login = () => {
                         <form>
                             <div>
                                 <p className='text-lg font-semibold py-2'>  Enter your email </p>
-                                <input type="email" placeholder='E@mail' className=' w-full h-14 rounded-2xl p-3 outline-none' />
+                                <input type="email" placeholder='E@mail' className=' w-full h-14 rounded-2xl p-3 outline-none text-black' />
                             </div>
                             <div>
                                 <p className='text-lg font-semibold py-2'> Enter your password </p>
-                                <input type="email" placeholder='password' className=' w-full h-14 rounded-2xl p-3 outline-none' />
+                                <input type="email" placeholder='password' className=' w-full h-14 rounded-2xl p-3 outline-none text-black' />
                             </div>
                             <div className='flex justify-between items-center py-5'>
                                 <div>
@@ -34,7 +34,7 @@ const Login = () => {
                                 </div>
                                 <Link to="/forgot-password"> Forgot password? </Link>
                             </div>
-                            <input type="submit" value="Login" className=' w-full h-14 rounded-2xl p-3 bg-red-600' />
+                            <input type="submit" value="Login" className=' w-full h-14 rounded-2xl p-3 bg-red-600 cursor-pointer' />
                         </form>
                         <p className='text-center py-5'> --------------------------------OR------------------------------ </p>
                         <div className='flex justify-center items-center gap-10'>
@@ -43,7 +43,7 @@ const Login = () => {
                             <button className='w-36 h-14 rounded-2xl text-white shadow-2xl bg-slate-950 flex justify-center items-center text-3xl'>  <FaTwitter /> </button>
                         </div>
                         <div className='pt-5 flex justify-center items-center'>
-                            <Link className='text-center'> I don't have an account.Signup </Link>
+                            <Link className='text-center' to="/signup"> I don't have an account.Signup </Link>
                         </div>
                     </div>
 
