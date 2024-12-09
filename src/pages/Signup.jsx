@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Signup = () => {
     return (
         <>
-            <div className="h-auto w-1/3 mx-auto py-10 px-5 my-5 rounded-md bg-slate-950">
+            <div className="h-auto w-1/3 mx-auto py-10 px-5 my-5 rounded-md bg-slate-950 text-white">
                 <h1 className='text-center text-4xl font-semibold'>Sign up</h1>
                 <form className='flex justify-center  items-center flex-col'>
                     <div>

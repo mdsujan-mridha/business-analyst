@@ -1,16 +1,34 @@
 
-import React from 'react';
-import loginImg from "../assets/login.jpg"
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import loginImg from "../assets/loginIcon.png"
+import { Link, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaFacebook, FaTwitter } from "react-icons/fa";
-
-
 const Login = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate()
+    const [user, setUser] = useState(false)
+
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        if (email && password) {
+            setUser(true)
+        }
+    }
+
+    useEffect(() => {
+        if (user) {
+            navigate("/home")
+        }
+    }, [user, navigate])
+
+
     return (
         <>
-            <div className='w-full min-h-screen px-12 bg-black flex gap-12 py-10'>
-                <div className='w-1/2'>
-                    <img src={loginImg} alt="Login-image" style={{ width: "100%", height: "100%" }} className=' rounded-xl' />
+            <div className='w-full min-h-screen px-12 bg-black flex gap-12 py-10 justify-center items-center'>
+                <div className='w-1/2 flex justify-center items-center'>
+                    <img src={loginImg} alt="Login-image"  className='rounded-xl w-96 h-96' />
                 </div>
                 <div className='w-1/2 text-white pl-12'>
                     <div className="text-center">
@@ -18,14 +36,25 @@ const Login = () => {
                         <p className='text-xl font-semibold py-5'> Welcome back brand owner! </p>
                     </div>
                     <div>
-                        <form>
+                        <form onSubmit={submitHandler}>
                             <div>
                                 <p className='text-lg font-semibold py-2'>  Enter your email </p>
-                                <input type="email" placeholder='E@mail' className=' w-full h-14 rounded-2xl p-3 outline-none text-black' />
+                                <input
+                                    type="email"
+                                    placeholder='E@mail'
+                                    className=' w-full h-14 rounded-2xl p-3 outline-none text-black'
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
                             </div>
                             <div>
                                 <p className='text-lg font-semibold py-2'> Enter your password </p>
-                                <input type="email" placeholder='password' className=' w-full h-14 rounded-2xl p-3 outline-none text-black' />
+                                <input
+                                    type="password"
+                                    placeholder='password'
+                                    className=' w-full h-14 rounded-2xl p-3 outline-none text-black'
+                                    onChange={(e) => setPassword(e.target.value)}
+
+                                />
                             </div>
                             <div className='flex justify-between items-center py-5'>
                                 <div>
