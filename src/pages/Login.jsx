@@ -33,7 +33,7 @@ const Login = () => {
                 <div className='w-1/2 text-white pl-12'>
                     <div className="text-center">
                         <h1 className='text-5xl font-bold'> Login </h1>
-                        <p className='text-xl font-semibold py-5'> Welcome back brand owner! </p>
+                        <p className='text-xl font-semibold py-5'> Welcome to  InsightEdge! </p>
                     </div>
                     <div>
                         <form onSubmit={submitHandler}>
