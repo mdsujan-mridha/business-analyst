@@ -1,10 +1,12 @@
 
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
+    const[userName,setUserName]= useState("");
+
     return (
         <>
             <div className=' bg-black'>
@@ -28,12 +30,12 @@ const Signup = () => {
                             <input type="password" placeholder='Confirm password' className=' w-96 h-12 rounded-2xl p-3 outline-none text-black' />
                         </div>
                         <div className='py-5'>
-                            <p className='text-md font-semibold py-2'> User country </p>
+                            <p className='text-md font-semibold py-2'> User category </p>
                             <select className="w-96 border-transparent rounded-lg text-sm text-black py-3 px-2 outline-none">
-                                <option selected="" className='text-black'>Country</option>
-                                <option>Bangladesh</option>
-                                <option>Pakisthan</option>
-                                <option>Australia</option>
+                                <option selected="" className='text-black'>Brandwoner</option>
+                                <option>New Entrepreneur</option>
+                                <option>Admin</option>
+                                
                             </select>
                         </div>
                         <div className='py-5'>
